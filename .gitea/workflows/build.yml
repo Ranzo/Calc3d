@@ -1,0 +1,44 @@
+name: Build and Release
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  build:
+    runs-on: testing-bots
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y mingw-w64
+
+      - name: Compile for Windows
+        run: x86_64-w64-mingw32-gcc program.c -o Calc3d.exe
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Calc3d.exe
+          path: Calc3d.exe
+
+  release:
+    runs-on: testing-bots
+    needs: build
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: Calc3d.exe
+          path: dist
+
+      - name: Create release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v1.0.0
+          release_name: Release v1.0.0
+          body: Automated release
+          draft: false
+          prerelease: true
+        env:
+          GITEA_TOKEN: ${{ secrets.GITEA_TOKEN }}
