@@ -56,7 +56,7 @@ S = ((p/1000*t/60*h)+(md*d*st/mk)+(a+post))*x+mod
 ## Лицензия
 MIT 
 ```
-Copyright (c) <2024> <Risen>
+Copyright (c) <2025> <Risen>
 
 Данная лицензия разрешает лицам, получившим копию данного программного обеспечения и сопутствующей документации 
 (далее — Программное обеспечение), безвозмездно использовать Программное обеспечение без ограничений, включая 
@@ -74,7 +74,7 @@ Copyright (c) <2024> <Risen>
 ВОЗНИКШИМ ИЗ-ЗА ИСПОЛЬЗОВАНИЯ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ ИЛИ ИНЫХ ДЕЙСТВИЙ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ.
 ```
 ```
-Copyright (c) <2024> <Risen>
+Copyright (c) <2025> <Risen>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
